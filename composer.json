@@ -1,5 +1,5 @@
 {
-    "name": "nztim/mailchimp",
+    "name": "matthiasvangorp/mailchimp",
     "description": "Mailchimp API wrapper, includes Laravel 5 support.",
     "license": "MIT",
     "authors": [
