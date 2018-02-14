@@ -32,10 +32,17 @@ class MailchimpApi
         return $this->call('get', '/lists/' . $listId);
     }
 
-    public function getMember(string $listId, string $memberId): array
+    public function getMember(string $listId, string $memberHash): array
     {
-        return $this->call('get', "/lists/{$listId}/members/{$memberId}");
+        return $this->call('get', "/lists/{$listId}/members/{$memberHash}");
     }
+
+
+    public function getMembers(string $listId): array
+    {
+        return $this->call('get', "/lists/{$listId}/members");
+    }
+
 
     public function addUpdate(string $listId, string $email, array $merge, bool $confirm)
     {

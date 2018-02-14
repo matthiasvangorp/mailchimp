@@ -86,6 +86,27 @@ class Mailchimp
         return $this->api->call($method, $endpoint, $data);
     }
 
+
+    /**
+     * get Members for a list
+     * @param string $listId
+     * @return array
+     */
+    public function getMembers(string $listId){
+        return $this->api->getMembers($listId);
+    }
+
+
+    /**
+     * Get member information by list and hash of members lowercase email
+     * @param $listId
+     * @param $memberHash
+     * @return array
+     */
+    public function getMember($listId, $memberHash){
+        return $this->api->getMember($listId, $memberHash);
+    }
+
     protected function checkListExists(string $listId)
     {
         try {
